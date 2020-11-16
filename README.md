@@ -1,5 +1,5 @@
 # Serial-JAM
 
-Library to Read Realtime Serial port data using PHP.
+PHP implementation to Read Realtime Serial port data.
 
-This package uses both Javascript and PHP. Currently on development
+This project uses both Javascript and PHP. Currently on development
