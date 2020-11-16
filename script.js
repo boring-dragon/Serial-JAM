@@ -1,7 +1,12 @@
 const SerialPort = require('serialport');
 const Readline = require('@serialport/parser-readline');
-const port = new SerialPort('COM5', { baudRate: 115200 });
+
+serialPort = process.argv.slice(2)[0];
+baudRate = parseInt(process.argv.slice(3)[0]);
+
+const port = new SerialPort(serialPort, { baudRate: baudRate });
 const parser = port.pipe(new Readline({ delimiter: '\n' }));
+
 // Read the port data
 port.on("open", () => {
   console.log('serial port open');

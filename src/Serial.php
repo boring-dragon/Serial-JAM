@@ -7,10 +7,8 @@ use Symfony\Component\Process\Process;
 
 class Serial
 {
-    protected $port;
-    protected $baudRate;
-
-    const COMMAND = ["node", "script.js"];
+    protected $port = "COM5";
+    protected $baudRate = 9600;
 
     public function setPort(string $port)
     {
@@ -24,7 +22,7 @@ class Serial
 
     public function execute()
     {
-        $process = new Process($this::COMMAND);
+        $process = new Process(["node", "script.js", $this->port, $this->baudRate]);
 
         $process->run(function ($type, $buffer) {
             if (Process::ERR === $type) {
