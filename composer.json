@@ -1,0 +1,12 @@
+{
+    "name": "jinas/serial",
+    "require": {
+        "symfony/process": "^5.1"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Jinas\\Serial\\": "src/"
+        }
+    }
+}
