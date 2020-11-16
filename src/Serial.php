@@ -14,15 +14,18 @@ class Serial
     public function setPort(string $port)
     {
         $this->port = $port;
+        return $this;
     }
     public function setBaudRate(int $rate)
     {
         $this->baudRate = $rate;
+        return $this;
     }
 
     public function setDelimeter(string $delimeter)
     {
         $this->delimeter = $delimeter;
+        return $this;
     }
 
     public function execute()

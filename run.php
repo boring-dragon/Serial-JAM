@@ -6,6 +6,6 @@ use Jinas\Serial\Serial;
 
 
 $serial = new Serial();
-$serial->setPort("COM5");
-$serial->setBaudRate(115200);
-$serial->execute();
+$serial->setPort("COM5")
+       ->setBaudRate(115200)
+       ->execute();
